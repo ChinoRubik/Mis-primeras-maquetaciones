@@ -1,0 +1,42 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+
+#q{
+    color: #223C23  !important;
+    text-shadow: 0px 0px 1px #ccc;
+
+}
+header{
+    height: 115px;
+}
+
+
+.contend p{
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+}
+
+.h{
+    width: 85%;
+    margin: 0px auto;
+    height: 75px;
+    text-align: center;
+
+    color: white;
+    background-color: #223C23;
+    border-radius:5px ;
+    
+    box-shadow: 7px 7px 0px #AD8A2B;
+}
+.h h1{
+    line-height: 65px;
+
+}
+.f{
+    border-radius: 15px 0px 0px 0px;
+    width: 40% ;
+}
+

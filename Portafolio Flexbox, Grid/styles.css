@@ -1,0 +1,137 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+#all {
+  width: 80%;
+  box-shadow: 0px 0px 10px #ccc;
+  margin: 40px auto;
+}
+#all header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccc;
+  height: 120px;
+  align-items: center;
+  padding-right: 20px;
+}
+#all header .h1 {
+  flex-basis: 60%;
+  flex-grow: 1;
+  margin-left: 5%;
+}
+#all header .h1 h1 {
+  font-family: helvetica;
+  font-weight: 35px;
+  font-style: italic;
+  text-shadow: 0px 0px 2px #ccc;
+}
+#all header #menu {
+  flex-basis: 30%;
+}
+#all header #menu ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#all header #menu ul li a {
+  padding: 15px;
+  color: #444;
+}
+#all header #menu ul li a:hover {
+  color: white;
+  background-color: #ccc;
+  transition: all 500ms;
+}
+#all #content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#all #content #con {
+  display: flex;
+  flex-flow: wrap row;
+  flex-basis: 80%;
+  justify-content: space-between;
+}
+#all #content #con .caja {
+  margin: 10px;
+  margin-right: 25px;
+  border: 1px solid #ccc;
+}
+#all #content #con .caja .info {
+  padding: 10px;
+}
+#all #content #con .caja .info a {
+  color: #444;
+}
+#all #content #con .caja .info a:hover {
+  color: green;
+  transition: all 500ms;
+}
+#all #content #con .caja .info p {
+  color: gray;
+}
+#all #content #aside {
+  display: flex;
+  flex-basis: 15%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 20px;
+}
+#all #content #aside h3 {
+  font-weight: 500;
+  padding: 15px;
+  color: #444;
+  border-bottom: 1px solid #ccc;
+}
+#all #content #aside ul li {
+  margin-bottom: 20px;
+}
+#all #content #aside ul {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+#all #content #aside ul li a {
+  display: block;
+  padding: 20px;
+  background-color: #eee;
+  color: #444;
+}
+#all #content #aside ul li a:hover {
+  background-color: #444;
+  color: #eee;
+  transition: all 500ms;
+}
+#all footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  flex-grow: 1;
+  align-items: center;
+}
+#all footer .h1f {
+  flex-basis: 66%;
+  color: #444;
+  font-style: italic;
+  margin-left: 4%;
+}
+#all footer p {
+  flex-basis: 30%;
+  text-align: right;
+  color: gray;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=styles.css.map */

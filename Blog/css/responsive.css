@@ -1,0 +1,149 @@
+@media (max-width:1240px){
+    
+    .wrap{
+        width: 90%;
+    }
+    .info{
+        margin: 10% 2.3% 0% 0%;
+        width: 17.7%;
+    }
+    .footerbox{
+        margin: 5% 2% 0% 1.33%;
+    }
+    .na{
+        width: 16%;
+    }
+    #htmld{
+        width: 76%;
+    }
+
+}
+
+@media (max-width:1036px){
+ 
+    .info p{
+        font-size: 14px;
+    }
+
+  
+    aside{
+        width: 27.5%;
+    }
+
+    aside #login{
+        height: 275px;
+    }
+    #searcher input[type="button"] {
+        width: 14%;
+        margin-left: -18px;
+
+}
+@media(max-width:872px){
+    #socialNetworks p{
+        font-size: 12px;
+    }
+}
+.articleBox{
+    height: 190px;
+}
+}
+
+@media(max-width:725px){
+    #sectionArticles{
+        width: 90%;
+        margin:0px auto;
+        margin-top:130px ;
+        
+    }
+      aside{
+        float: none;
+        clear: both;
+        width: 100%;
+        
+    }
+
+    #lastArticles, .articleBox, #goBlog{
+        margin-left:5%;
+        
+    }
+    #banner h3{
+        font-size: 240%;
+    }
+    #searcher input[type="button"] {
+        width: 9%;
+}
+    .info{
+        height: 163px;
+    }
+    #menu{
+        margin-top: 5px;
+        width: 83%;
+    }
+    #menu ul li{
+        float: none;
+        clear: both;
+    }
+    #logo{
+        float: none;
+        margin: 0px auto;
+
+    } 
+    header{
+        height: 130px;
+        padding-top: 10px;
+    }
+    
+    .articleBox{
+        height: 190px;
+    }
+   
+
+     .tags{
+        width: 90%;
+        margin: 0px auto;
+        margin-bottom: 15px;
+    }
+
+    aside #login{
+        height: 200px;
+    }
+
+    aside #login input[type="submit"]
+    {
+        margin-left: 24%;        
+    }
+    #socialNetworks p{
+        font-size: 25px;
+    }
+    aside #login a{
+        text-align: center;
+    }
+    footer{
+        height: 1200px;
+    }
+    .footerbox{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #navebox .na{
+        width: 15%;
+    }
+    #htmld{
+        width: 43%;
+    }
+    #autor{
+        margin-top: 40px;
+    }
+}
+
+@media(max-width:630px){
+    .info h3{
+        font-size: 15px;
+        
+    }
+    .info p{
+        opacity: 0;
+    }
+  
+}

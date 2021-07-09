@@ -1,0 +1,792 @@
+/* IN ORDER TO NOT HAVE ANY PADDING AND MARGIN AND DON´T DESCONTROL OUR DESIGN */
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+/* ///////////////////////////////////////////////////////////////////// */
+
+/* FONTS */
+
+@font-face{
+    font-family: "trebuchet";
+    src: url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "bebas";
+    src: url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "websym";
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?#iefix) format("embedded-opentype"),
+        url(fonts/websymbols-regular-webfont.ttf) format("truetype"),
+        url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format("svg");
+        font-weight: normal;
+        font-style: normal;
+}
+
+/* END FONTS */
+
+
+body{
+    background-image: url(img/pattern.png);
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    font-family: "bebas";
+    letter-spacing: 1px;
+}
+.wrap{
+    width: 1200px;
+    margin:0px auto;
+}
+#gear{
+    display: block;
+    font-family: "websym";
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 50px;
+
+    /* ANIMATION CODE */
+    animation-name: gearAnimation;
+    animation-duration: 3s; /* DURATION*/
+    animation-iteration-count: infinite; /* MUST BE INFINITE IN ORDER TO BEING ROTATING*/
+    animation-timing-function: linear;  /*IN ORDER TO NOT BE SLOW OR FAST IN SOME MOMENTS*/
+}
+
+@keyframes gearAnimation{
+            /*WE ARE ROTATING THE GEAR*/
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+#h3Blog{
+    display:block;
+    float: right;
+    margin-right: 60px;
+    margin-top: 11px;
+    font-size: 31px;
+}
+
+
+#logo{
+    float: left;
+    width: 200px;
+    height: 55px;
+    margin:8px;
+    background-color: #37bcf9;
+    cursor: pointer;
+    overflow: hidden;
+}
+#logo:hover{
+    background-color: gray;
+    color: black;
+    border-radius: 5px;
+}
+
+    /* ANIMATION OF TRANSLATION OF THE GEAR*/
+    #logo:hover #gear{
+        animation-name: translateGear;
+        animation-duration: 500ms;
+        animation-iteration-count: initial;
+        
+    }
+    
+    @keyframes translateGear{
+        0%
+        {
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(-200%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
+    }
+/* ANIMATION FOR H3 BLOG */
+#logo:hover #h3Blog{
+    animation-name: translateH3Blog;
+    animation-duration: 500ms;
+    animation-iteration-count: initial;
+    
+}
+
+@keyframes translateH3Blog{
+    0%
+    {
+        transform: translateX(200%);
+    }
+    
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+/* MENU CODE */
+
+#menu{
+    float: right;
+}
+
+#menu ul li{
+    display:inline-block;
+    font-size: 24px;
+    margin-left: 20px ;
+    margin-right: 20px;
+    margin-top:20px ;
+}
+
+#menu ul li a{
+    display: block;
+    color:white;
+    text-decoration: none;
+}
+
+#menu ul li a:hover{
+
+    color:#37bcf9;
+    transform:scale(1.2,1.2);
+    transition: all 500ms;
+
+}
+/* END MENU CODE */
+
+#banner{
+    margin-top: 20px;
+    width: 97%;
+    height: 120px;
+    border: 10px solid white;
+    background: url(img/bakbaner.png);
+    background-position: -334px -167px;
+    box-shadow: 0px 0px 4px #ccc;
+    animation: bannerMove 10s linear;
+    overflow: hidden;
+}
+#banner h3{
+    text-shadow: 2px 2px 2px black;
+    text-align:center;
+    font-size: 50px;
+    font-family: "bebas";
+    letter-spacing: 1px;
+    line-height: 110px;
+    color: white;
+    animation: bannerH3Move 10s linear;
+}
+
+/* ANIMATION ON BANNER */
+
+@keyframes bannerMove{
+
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -334px -167px;
+
+    }
+}
+
+
+@keyframes bannerH3Move{
+
+    0%{
+        transform: translateX(-200%) scale(5,5);
+        opacity: 0.9;
+    }
+    25%{
+        transform: translateX(200%) scale(3,3);
+        opacity: 0.7;
+    }
+    50%{
+        transform: translateX(-100%) scale(2,2);
+        color: black;
+        opacity: 0.4;
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+.info{
+
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    box-shadow: 0px 0px 2px gray,1px 1px 3px #ccc;
+    margin: 70px 40px 0px 0px;
+    float: left;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sym{
+    display: block;
+    font-family: "websym";
+    font-size: 50px;
+    text-align: center;
+    line-height: 110px;
+    overflow: hidden;
+}
+
+.info h3{
+
+    display: block;
+    width: 100%;
+    font-size: 21px;
+    text-align: center;
+    color: #00538C;
+    font-family: "trebuchet";
+    font-weight: bold;
+}
+
+.info p{
+    display: block;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "trebuchet";
+    color: #00538C;
+    text-align: center;
+
+}
+
+    /* ANIMATION OF INFORMATION */
+.info:hover{
+    background-color:black; 
+    transition: all 500ms;
+
+}
+    /* ANIMATION ON SYMBOL */
+
+.info:hover .sym{
+    color:  #1078bd;
+    animation: symTraslation 300ms linear ;
+
+}
+@keyframes symTraslation{
+    0%{
+        color: #1078bd21;
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+    /* ANIMATION ON H3 */
+
+.info:hover h3{
+    color:  white;
+    animation: h3Traslation 400ms linear ;
+ 
+}
+
+@keyframes h3Traslation{
+    0%{
+        color: rgb(255,255,255,0.2);
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+
+}
+/* ANIMATION ON P */
+.info:hover P{
+    color:  white;
+    animation: pTraslation 300ms linear ;
+ 
+}
+
+@keyframes pTraslation{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+}
+
+
+
+
+#floatfixed{
+    float: none;
+    clear: both;
+}
+
+#sectionArticles{
+    margin-top:130px ;
+    width: 70%;
+    float: left;
+}
+
+#lastArticles{
+    width: 100%;
+    height: 80px;
+    background: url(img/pxgray.png);
+    box-shadow:3px 3px 0px black;
+    text-align: center;
+    font-family: "bebas";
+    letter-spacing: 1px;
+    line-height: 85px;
+    font-size: 30px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.articleBox{
+    width: 99%;
+    height: 150px;
+    margin: 0px auto;
+    margin-top: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 2px gray,0px 1px 3px #ccc;
+    font-family: "trebuchet";
+    
+}
+
+.articleBox h3{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    font-size: 25px;
+    color: #00538C;
+    font-family: "trebuchet";
+}
+
+.articleBox #date{
+    display: block;
+    float: right;
+    width: 30%;
+    height: 40px;
+    background-color: #393D3F;
+    color: white;
+    text-align: center;
+    border-radius: 0px 0px 0px 5px ;
+    line-height: 38px;
+}
+
+.articleBox article{
+    display: block;
+    float: left;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.articleBox a{
+    text-decoration: none;
+    color: #1078bd;
+}
+
+.articleBox a:hover{
+    text-decoration: underline;
+    color: #07436b;
+}
+
+#goBlog{
+    width: 99%;
+    height: 120px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+    border-radius: 0px 0px 0px 5px ;
+    text-align: center;
+    font-family: "bebas";
+    letter-spacing: 1px;
+    line-height: 120px;
+    font-size: 30px;
+
+    box-shadow: 0px 0px 2px gray,0px 1px 3px #ccc;
+    cursor: pointer;
+    background-color: white;
+}
+
+#goBlog a{
+    display: block;
+    color: #00538C;
+    text-decoration: none;
+    
+}
+    /* ANIMATION ON GOVLOG BUTTOM */
+#goBlog:hover{
+    border-radius: 250px;
+    border: 20px solid #37bcf9;
+    background-color: #393D3F;
+    color: aliceblue;
+    transition: all 10s ;
+    animation: color 15s linear infinite;
+    
+}
+
+#goBlog:hover a{
+    color: rgb(190, 190, 190);
+    
+}
+
+@keyframes color{
+    0%{
+        box-shadow: 0px 0px 20px rgb(228, 20, 20);
+        border: 20px solid #37bcf9;
+    }
+   
+    10%{
+        box-shadow: 0px 0px 20px rgb(34, 252, 234);
+        border: 20px solid #f9ec37;
+    }
+    20%{
+        box-shadow: 0px 0px 20px rgb(251, 255, 15);
+        border: 20px solid #f94e37;
+    }
+    30%{
+        box-shadow: 0px 0px 20px rgb(255, 167, 2);
+        border: 20px solid #29f700;
+    }
+    40%{
+        box-shadow: 0px 0px 20px rgb(118, 248, 12);
+        border: 20px solid #37f9e9;
+    }
+    50%{
+        box-shadow: 0px 0px 20px rgb(0, 255, 242);
+        border: 20px solid #0004fa;
+    }
+    60%{
+        box-shadow: 0px 0px 20px rgb(130, 0, 252);
+        border: 20px solid #8b9296;
+    }
+    70%{
+        box-shadow: 0px 0px 20px rgb(4, 0, 255);
+        border: 20px solid #000000;
+    }
+    80%{
+        box-shadow: 0px 0px 20px rgb(0, 255, 200);
+        border: 20px solid #ff0cff;
+    }
+    90%{
+        box-shadow: 0px 0px 20px rgb(240, 220, 220);
+        border: 20px solid #647213;
+    }
+    100%{
+        box-shadow: 0px 0px 20px brown;
+        border: 20px solid #37bcf9;
+    }
+
+
+}
+
+
+/* STARTS STYLES OF ASIDE */
+
+aside{
+    width: 280px ;
+    float: right;
+    margin-top:130px;
+    font-family: "trebuchet";
+}
+
+.tags{
+    width: 100%;
+    height: 40px;
+    background: url(img/pxgray.png);
+    box-shadow:3px 3px 0px #393D3F;
+    
+    margin-bottom: 15px;
+}
+
+.logo{
+    font-family: "websym";
+    color: black;
+}
+
+.tags h3{
+    display: block;
+    font-family: "bebas";
+    font-size: 27px;
+    font-weight: lighter;
+    text-align:left;
+    line-height: 45px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+}
+
+#searcher{
+    width: 90%;
+    margin: 0px auto;
+    height: 30px;
+    border:1px solid#cccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 3px #919191cc inset;
+    background-color: white;
+    }
+
+#searcher input[type="text"]{
+    height: 30px;
+    width: 87%;
+    border: none;
+    padding-left: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc;
+}
+
+#searcher input[type="text"]:focus{
+    color: #393D3F;
+    transition:  all 300ms;
+}
+
+#searcher input[type="button"]{
+    height: 30px;
+    width: 25px;
+    cursor: pointer;
+    background-color:transparent;
+    border:none;
+    border-left:1px solid #ccc;
+    margin-left: -5px;
+    padding-left: 4px ;
+}
+
+.asidebox{
+    width: 90%;
+    
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 4px #ccc,4px 2px 3px #ccc, 2px 2px 4px rgb(128, 128, 128);
+    margin:0px auto;
+    margin-bottom: 15px;
+    padding-top:10px ;
+}
+
+#login input[type="email"],
+#login input[type="password"]{
+    display: block;
+    height: 30px;
+    width: 78%;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 3px rgb(160, 158, 158) inset;
+    margin: 0px auto;
+    margin-bottom: 15px;
+    color: #ccc;
+    transition: all 300ms;
+    padding-left: 30px;
+    }
+
+    #login input[type="email"]:focus,
+    #login input[type="password"]:focus{
+    color: #393D3F;
+    box-shadow: 0px 0px 3px rgb(121, 120, 120) inset;
+    }
+
+    #user, #pass{
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 20px;
+    }
+
+    #pass{
+        font-size: 20px;
+        margin-left: 23px;
+    }
+
+    #login input[type="submit"],
+    #login input[type="reset"]{
+        color: white;
+        font-size: 17px;
+        width: 100px;
+        height: 40px;
+        font-family: "trebuchet";
+        margin-left:15px ;
+        background: linear-gradient(to bottom,#1078bd 0%,#00538C 100%);
+        border: 2px solid black;
+        cursor: pointer;
+        margin-bottom: 15px;
+        transition: all 300ms;
+    }
+
+    #login input[type="submit"]:hover,
+    #login input[type="reset"]:hover{
+        box-shadow: 0px 0px 5px gray;
+    }
+
+    #login a{
+        display: block;
+        text-decoration: none;
+        font-family: "trebuchet";
+        margin-left: 15px;
+        color: #1078bd ;
+        font-size: 17px;
+        transition: all 300ms;
+    }
+
+    #login a:hover{
+        text-decoration: underline;
+        color: #07436b;
+    }
+
+    #tweeter, #facebook, #youtube{
+        font-size: 40px;
+        color: black;
+        margin: 2px 0px 15px 20px;
+    }
+
+    #socialNetworks p{
+        display: block;
+        position: relative;
+        margin-left: 80px;
+        margin-top: -27px;
+        width: 30%;
+        font-family: "trebuchet";
+        font-weight: 800;
+        font-size: 17px;
+        color:gray;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 500ms ;
+    }
+    /* ANIMATION ON SOCIAL NETWORKS */
+    #tweeter:hover p, #facebook:hover p, #youtube:hover p{
+        transform: translateX(0%);
+        opacity: 1;
+        transform: scale(1.3,1.3);
+        color: #1078bd;
+        text-shadow: 1px 1px 3px #ccc;
+    }
+    
+
+    /* END OF ASIDE */
+
+
+    /* HERE STARTS THE FOOTER */
+    footer{
+        width: 100%;
+        height: 430px;
+        background-color: black;
+    }
+
+    .footerbox{
+            width: 30%;
+            height: 330px;
+            background-color:black;
+            float: left;
+            margin: 60px 40px 0px 0px;
+            
+    }
+
+    .footerbox .headfoot{
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 52px;
+        font-family: "bebas";
+        letter-spacing: 2px;
+        font-size: 35px;
+    
+        background: url(img/pxgray.png),white;
+        /* background-color: #ccc; */
+        
+
+    }
+
+    #menuFooter ul li a{
+        margin-top: 10px;
+        display: block;
+        color:#37bcf9;
+        padding:15px;
+        font-size: 30px;
+        text-decoration: none;
+        font-family: "trebuchet";
+        cursor: pointer;
+        transition: all 500ms;
+    }
+
+    #menuFooter ul li:hover a {
+        color: white;
+        transform: translateX(25%);
+        transition: all 500ms;
+    }
+        
+    
+
+    #menuFooter ul li{
+        list-style:disc;
+        color: white;
+        font-size: 35px;
+        margin-left: 20px;
+        border-bottom: 1px solid gray;
+    }
+
+    #menuFooter ul li:first-child{
+        border: none;
+    }
+
+    .logofooter{
+        width: 100%;
+        height: 50px;
+       
+      
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .logofooter img{
+        display:block;
+        
+        margin:0px auto;
+    }
+    .na{
+        display: block;
+        float: left;
+        width: 50px;
+        margin-left: 5px;
+    }
+
+    #navebox{
+        width: 84%;
+
+        margin: 0px auto;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    #footerPr{
+        display: block;
+        font-family: "trebuchet";
+        font-size: 17px;
+        color: white;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #map{
+        width: 100%;
+        height: 287px;
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 4px gray;
+    }
+
+    /* HERE ENDS THE FOOTER */ 
